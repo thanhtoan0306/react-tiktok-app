@@ -66,7 +66,7 @@ export default function ClientBlindPick() {
   return (
     <div>
       <ChampList />
-      <iframe
+      {/* <iframe
         width="560"
         height="315"
         src="https://www.youtube.com/embed/QphkgnxZ-oE?si=kneKBehwPffZTdVm"
@@ -75,7 +75,7 @@ export default function ClientBlindPick() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
-      ></iframe>
+      ></iframe> */}
     </div>
   );
 }

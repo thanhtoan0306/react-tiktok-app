@@ -45,6 +45,8 @@ const defaultMember = {
   label: '{0:user} joined',
   displayType: 'live_room_enter_toast',
 };
+const DEFAUT_IMAGE =
+  'https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/1dec87dd6e583aa7031db63150d8b86611e2f177-1280x720.jpg?auto=format&fit=fill&q=80&w=956';
 const array = [];
 for (let i = 0; i < 100; i++) {
   array.push(defaultMember); // Or any other value you want
@@ -53,12 +55,24 @@ for (let i = 0; i < 100; i++) {
 export default function ChampList(props) {
   const memberList = props.memberList || array;
   return (
-    <div className="wrapper">
-      <div class="grid-container">
-        {memberList.map(item => {
-          return <div class="grid-item">{item.nickname}</div>;
-        })}
-         
+    <div>
+      <div className="wrapper">
+        <div class="grid-container">
+          {memberList.map(item => {
+            return (
+              <div class="grid-item">
+                <div>
+                  <img width={80} height={80} style={{ objectFit: 'cover' }} src={item.profilePictureUrl || DEFAUT_IMAGE} />
+                  <div className="champ-name">{item.nickname}</div>
+                </div>
+              </div>
+            );
+          })}
+           
+        </div>
+        <div className="button-container">
+          <button className="button">Pick</button>
+        </div>
       </div>
     </div>
   );
