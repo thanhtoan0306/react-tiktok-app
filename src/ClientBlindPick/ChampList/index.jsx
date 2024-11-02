@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import './index.css';
 const defaultMember = {
   actionId: 1,
@@ -54,9 +54,10 @@ for (let i = 0; i < 100; i++) {
 
 export default function ChampList(props) {
   const memberList = props.memberArray || [defaultMember];
-  const [pickChamp, setPickChamp] = useState(defaultMember);
+  const audioRef = useRef(null);
   return (
     <div>
+      <audio ref={audioRef} src="your-audio-file.mp3" />
       <div className="wrapper">
         <div class="grid-container">
           {memberList.map(item => {

@@ -81,49 +81,24 @@ export default function PickRow(props) {
         </div>
       </div>
       <div className="grid-container-pick">
-        <div className="player">
-          <img
-            className="player-avatar"
-            src={props.t1PickList[0]?.profilePictureUrl || 'https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/TOP.png'}
-          />
+        <div className="player player-0">
+          <img className="player-avatar" src={props.t1PickList[0]?.profilePictureUrl || ''} />
         </div>
-        <div className="player">
-          <img
-            className="player-avatar"
-            src={
-              props.t1PickList[1]?.profilePictureUrl || 'https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/MIDDLE.png'
-            }
-          />
+        <div className="player  player-1">
+          <img className="player-avatar" src={props.t1PickList[1]?.profilePictureUrl} />
         </div>
-        <div className="player">
-          <img
-            className="player-avatar"
-            src={
-              props.t1PickList[2]?.profilePictureUrl ||
-              'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2ec970f4-1706-4915-9a93-41f3d9c8202c/degndao-3803ac5c-8d3b-4205-bdac-17e03fb712dd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJlYzk3MGY0LTE3MDYtNDkxNS05YTkzLTQxZjNkOWM4MjAyY1wvZGVnbmRhby0zODAzYWM1Yy04ZDNiLTQyMDUtYmRhYy0xN2UwM2ZiNzEyZGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dl2fyLAB4_80akvDhBoZ-4w7eforvxOeLLeqT1Jx2G4'
-            }
-          />
+        <div className="player  player-2">
+          <img className="player-avatar" src={props.t1PickList[2]?.profilePictureUrl} />
         </div>
-        <div className="player">
+        <div className="player  player-3">
           {' '}
-          <img
-            className="player-avatar"
-            src={
-              props.t1PickList[3]?.profilePictureUrl || 'https://github.com/esports-bits/lol_images/blob/master/role_lane_icons/SUPPORT.png?raw=true'
-            }
-          />
+          <img className="player-avatar" src={props.t1PickList[3]?.profilePictureUrl} />
         </div>
-        <div className="player">
+        <div className="player  player-4">
           {' '}
-          <img
-            className="player-avatar"
-            src={
-              props.t1PickList[4]?.profilePictureUrl ||
-              'https://raw.githubusercontent.com/esports-bits/lol_images/refs/heads/master/role_lane_icons/ADC.png'
-            }
-          />
+          <img className="player-avatar" src={props.t1PickList[4]?.profilePictureUrl} />
         </div>
-        <div className="team">
+        <div className="player team">
           <div className="match">GRAND FINALS </div>
           <div className="patch">PATCH 14.6 </div>
 
@@ -155,47 +130,22 @@ export default function PickRow(props) {
             </div>
           </div>
         </div>
-        <div className="player">
-          <img
-            className="player-avatar"
-            src={props.t2PickList[0]?.profilePictureUrl || 'https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/TOP.png'}
-          />
+        <div className="player player-0">
+          <img className="player-avatar" src={props.t2PickList[0]?.profilePictureUrl} />
         </div>
-        <div className="player">
-          <img
-            className="player-avatar"
-            src={
-              props.t2PickList[1]?.profilePictureUrl || 'https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/MIDDLE.png'
-            }
-          />
+        <div className="player  player-1">
+          <img className="player-avatar" src={props.t2PickList[1]?.profilePictureUrl} />
         </div>
-        <div className="player">
-          <img
-            className="player-avatar"
-            src={
-              props.t2PickList[2]?.profilePictureUrl ||
-              'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2ec970f4-1706-4915-9a93-41f3d9c8202c/degndao-3803ac5c-8d3b-4205-bdac-17e03fb712dd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJlYzk3MGY0LTE3MDYtNDkxNS05YTkzLTQxZjNkOWM4MjAyY1wvZGVnbmRhby0zODAzYWM1Yy04ZDNiLTQyMDUtYmRhYy0xN2UwM2ZiNzEyZGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dl2fyLAB4_80akvDhBoZ-4w7eforvxOeLLeqT1Jx2G4'
-            }
-          />
+        <div className="player  player-2">
+          <img className="player-avatar" src={props.t2PickList[2]?.profilePictureUrl} />
         </div>
-        <div className="player">
+        <div className="player  player-3">
           {' '}
-          <img
-            className="player-avatar"
-            src={
-              props.t2PickList[3]?.profilePictureUrl || 'https://github.com/esports-bits/lol_images/blob/master/role_lane_icons/SUPPORT.png?raw=true'
-            }
-          />
+          <img className="player-avatar" src={props.t2PickList[3]?.profilePictureUrl} />
         </div>
-        <div className="player">
+        <div className="player  player-4">
           {' '}
-          <img
-            className="player-avatar"
-            src={
-              props.t2PickList[4]?.profilePictureUrl ||
-              'https://raw.githubusercontent.com/esports-bits/lol_images/refs/heads/master/role_lane_icons/ADC.png'
-            }
-          />
+          <img className="player-avatar" src={props.t2PickList[4]?.profilePictureUrl} />
         </div>
       </div>
     </div>

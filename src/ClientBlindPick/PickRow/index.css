@@ -20,7 +20,7 @@
 .ban-cell {
   width: 60px;
   height: 60px;
-  border: solid 1px goldenrod;
+  border: solid 1px transparent;
   filter: grayscale(100%);
 }
 
@@ -32,12 +32,40 @@
 }
 
 .player {
-  border: solid 1px goldenrod;
+  border-right: solid 1px gainsboro;
+  border-top: solid 1px red;
+  border-bottom: solid 1px ghostwhite;
   /* height: 520px; */
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+
+.player-0 {
+  background-image: url('https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/TOP.png');
+  background-repeat: no-repeat;
+}
+
+.player-1 {
+  background-image: url('https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/MIDDLE.png');
+  background-repeat: no-repeat;
+}
+
+.player-2 {
+  background-image: url('https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/JUNGLE.png');
+  background-repeat: no-repeat;
+}
+
+.player-3 {
+  background-image: url('https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/SUPPORT.png');
+  background-repeat: no-repeat;
+}
+
+.player-4 {
+  background-image: url('https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/ADC.png');
+  background-repeat: no-repeat;
 }
 
 .player-avatar {
