@@ -7,7 +7,24 @@
   overflow-x: hidden;
 }
 
+.ban-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ban-team {
+  display: flex;
+}
+
+.ban-cell {
+  width: 80px;
+  height: 80px;
+  border: solid 1px black
+}
+
 .grid-container-pick {
+  height: 250px;
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr
@@ -15,7 +32,7 @@
 
 .player {
   border: solid 1px black;
-  height: 520px;
+  /* height: 520px; */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -24,7 +41,7 @@
 
 .player-avatar {
   /* width: 100%; */
-  transform: translateY(-150px);
+  /* transform: translateY(-150px); */
   width: auto;
   height: 100%;
   object-fit: contain;

@@ -1,6 +1,7 @@
 .wrapper {
   width: 700px;
-  height: 540px;
+  position: relative;
+  /* height: 540px; */
 }
 
 .grid-container {
@@ -35,7 +36,12 @@
 }
 
 .button-container {
-  width: 100%;
+  position: absolute;
+  bottom: -60px;
+    left: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+  /* width: 200px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,6 +49,6 @@
 
 .button {
   border: solid 1px orange;
-  width: 200px;
+  /* width: 200px; */
   color: orange;
 }

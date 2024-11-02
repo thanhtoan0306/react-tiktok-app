@@ -56,6 +56,24 @@ export default function PickRow(props) {
   const memberList = props.memberList || array;
   return (
     <div className="wrapper-pick">
+      <div className="ban-container">
+        <div className="ban-team">
+          <div className="ban-cell">
+            <img width={80} height={80} src={DEFAUT_IMAGE} />
+          </div>
+          <div className="ban-cell">
+            <img width={80} height={80} src={DEFAUT_IMAGE} />
+          </div>
+          <div className="ban-cell">
+            <img width={80} height={80} src={DEFAUT_IMAGE} />
+          </div>
+        </div>
+        <div className="ban-team">
+          <div className="ban-cell">ban-container</div>
+          <div className="ban-cell">ban-container</div>
+          <div className="ban-cell">ban-container</div>
+        </div>
+      </div>
       <div className="grid-container-pick">
         <div className="player">
           <img className="player-avatar" src="https://i.pinimg.com/474x/cd/e9/37/cde9376a994f7e736a85a42e47ec7f9d.jpg" />
