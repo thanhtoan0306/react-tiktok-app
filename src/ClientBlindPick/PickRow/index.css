@@ -18,9 +18,10 @@
 }
 
 .ban-cell {
-  width: 80px;
-  height: 80px;
-  border: solid 1px goldenrod
+  width: 60px;
+  height: 60px;
+  border: solid 1px goldenrod;
+  filter: grayscale(100%);
 }
 
 .grid-container-pick {

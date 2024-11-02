@@ -50,7 +50,7 @@
 
 .button-container {
   position: absolute;
-  bottom: -100px;
+  bottom: -80px;
   left: 30%;
   /* right: 50%; */
   transform: translateY(-50%);

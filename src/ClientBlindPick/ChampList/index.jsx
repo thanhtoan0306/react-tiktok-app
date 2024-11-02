@@ -61,12 +61,6 @@ export default function ChampList(props) {
         <div class="grid-container">
           {memberList.map(item => {
             const hasId2 = props.confirmChampList.some(obj => obj.uniqueId === item.uniqueId);
-
-            if (hasId2) {
-              console.log('Array includes ID 2');
-            } else {
-              console.log('Array does not include ID 2');
-            }
             return (
               <div class="grid-item">
                 <div>
@@ -99,6 +93,10 @@ export default function ChampList(props) {
           <button
             style={{ width: 300 }}
             onClick={() => {
+              const hasId2 = props.confirmChampList.some(obj => obj.uniqueId === props.pickChamp.uniqueId);
+              if (hasId2) {
+                return;
+              }
               props.onConfirmChamp(props.pickChamp);
             }}
             className="button"

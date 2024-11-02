@@ -59,51 +59,68 @@ export default function PickRow(props) {
       <div className="ban-container">
         <div className="ban-team">
           <div className="ban-cell">
-            <img width={80} height={80} src={props.t1banList[0]?.profilePictureUrl || GRAY_IMAGE} />
+            <img width={60} height={60} src={props.t1banList[0]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
           <div className="ban-cell">
-            <img width={80} height={80} src={props.t1banList[1]?.profilePictureUrl || GRAY_IMAGE} />
+            <img width={60} height={60} src={props.t1banList[1]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
           <div className="ban-cell">
-            <img width={80} height={80} src={props.t1banList[2]?.profilePictureUrl || GRAY_IMAGE} />
+            <img width={60} height={60} src={props.t1banList[2]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
         </div>
         <div className="ban-team">
           <div className="ban-cell">
-            <img width={80} height={80} src={props.t2banList[0]?.profilePictureUrl || GRAY_IMAGE} />
+            <img width={60} height={60} src={props.t2banList[0]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
           <div className="ban-cell">
-            <img width={80} height={80} src={props.t2banList[1]?.profilePictureUrl || GRAY_IMAGE} />
+            <img width={60} height={60} src={props.t2banList[1]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
           <div className="ban-cell">
-            <img width={80} height={80} src={props.t2banList[2]?.profilePictureUrl || GRAY_IMAGE} />
+            <img width={60} height={60} src={props.t2banList[2]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
         </div>
       </div>
       <div className="grid-container-pick">
         <div className="player">
-          <img className="player-avatar" src="https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/TOP.png" />
-        </div>
-        <div className="player">
-          <img className="player-avatar" src={'https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/MIDDLE.png'} />
+          <img
+            className="player-avatar"
+            src={props.t1PickList[0]?.profilePictureUrl || 'https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/TOP.png'}
+          />
         </div>
         <div className="player">
           <img
             className="player-avatar"
             src={
+              props.t1PickList[1]?.profilePictureUrl || 'https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/MIDDLE.png'
+            }
+          />
+        </div>
+        <div className="player">
+          <img
+            className="player-avatar"
+            src={
+              props.t1PickList[2]?.profilePictureUrl ||
               'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2ec970f4-1706-4915-9a93-41f3d9c8202c/degndao-3803ac5c-8d3b-4205-bdac-17e03fb712dd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJlYzk3MGY0LTE3MDYtNDkxNS05YTkzLTQxZjNkOWM4MjAyY1wvZGVnbmRhby0zODAzYWM1Yy04ZDNiLTQyMDUtYmRhYy0xN2UwM2ZiNzEyZGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dl2fyLAB4_80akvDhBoZ-4w7eforvxOeLLeqT1Jx2G4'
             }
           />
         </div>
         <div className="player">
           {' '}
-          <img className="player-avatar" src={'https://github.com/esports-bits/lol_images/blob/master/role_lane_icons/SUPPORT.png?raw=true'} />
+          <img
+            className="player-avatar"
+            src={
+              props.t1PickList[3]?.profilePictureUrl || 'https://github.com/esports-bits/lol_images/blob/master/role_lane_icons/SUPPORT.png?raw=true'
+            }
+          />
         </div>
         <div className="player">
           {' '}
           <img
             className="player-avatar"
-            src={'https://raw.githubusercontent.com/esports-bits/lol_images/refs/heads/master/role_lane_icons/ADC.png'}
+            src={
+              props.t1PickList[4]?.profilePictureUrl ||
+              'https://raw.githubusercontent.com/esports-bits/lol_images/refs/heads/master/role_lane_icons/ADC.png'
+            }
           />
         </div>
         <div className="team">
@@ -138,11 +155,48 @@ export default function PickRow(props) {
             </div>
           </div>
         </div>
-        <div className="player">1</div>
-        <div className="player">2</div>
-        <div className="player">3</div>
-        <div className="player">4</div>
-        <div className="player">5</div>
+        <div className="player">
+          <img
+            className="player-avatar"
+            src={props.t1PickList[0]?.profilePictureUrl || 'https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/TOP.png'}
+          />
+        </div>
+        <div className="player">
+          <img
+            className="player-avatar"
+            src={
+              props.t1PickList[1]?.profilePictureUrl || 'https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/MIDDLE.png'
+            }
+          />
+        </div>
+        <div className="player">
+          <img
+            className="player-avatar"
+            src={
+              props.t1PickList[2]?.profilePictureUrl ||
+              'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2ec970f4-1706-4915-9a93-41f3d9c8202c/degndao-3803ac5c-8d3b-4205-bdac-17e03fb712dd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJlYzk3MGY0LTE3MDYtNDkxNS05YTkzLTQxZjNkOWM4MjAyY1wvZGVnbmRhby0zODAzYWM1Yy04ZDNiLTQyMDUtYmRhYy0xN2UwM2ZiNzEyZGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dl2fyLAB4_80akvDhBoZ-4w7eforvxOeLLeqT1Jx2G4'
+            }
+          />
+        </div>
+        <div className="player">
+          {' '}
+          <img
+            className="player-avatar"
+            src={
+              props.t1PickList[3]?.profilePictureUrl || 'https://github.com/esports-bits/lol_images/blob/master/role_lane_icons/SUPPORT.png?raw=true'
+            }
+          />
+        </div>
+        <div className="player">
+          {' '}
+          <img
+            className="player-avatar"
+            src={
+              props.t1PickList[4]?.profilePictureUrl ||
+              'https://raw.githubusercontent.com/esports-bits/lol_images/refs/heads/master/role_lane_icons/ADC.png'
+            }
+          />
+        </div>
       </div>
     </div>
   );
