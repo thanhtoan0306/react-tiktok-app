@@ -105,7 +105,7 @@ export const PHASE = { BAN: 1, PICK: 2 };
 const TEAM = { T1: 1, T2: 2 };
 export default function ClientBlindPick() {
   const [lastMessage, setLastMessage] = useState(null);
-  const [memberArray, setMemberArray] = useState(array);
+  const [memberArray, setMemberArray] = useState([]);
   const [pickChamp, setPickChamp] = useState(defaultMember);
   const [t1banList, setT1banList] = useState([]);
   const [t2banList, setT2banList] = useState([]);
@@ -116,19 +116,19 @@ export default function ClientBlindPick() {
   const [phase, setPhase] = useState(PHASE.BAN);
   const [teamSwitch, setTeamSwitch] = useState(TEAM.T1);
 
-  //   const { sendMessage, lastMessage: socketMessage } = useWebSocket('ws://localhost:8080');
+  const { sendMessage, lastMessage: socketMessage } = useWebSocket('ws://localhost:8080');
 
-  //   useEffect(() => {
-  //     setLastMessage(socketMessage);
-  //     console.log(socketMessage);
-  //     if (socketMessage?.data) {
-  //       const memberJoin = JSON.parse(socketMessage?.data).data;
-  //       console.log(memberJoin);
-  //       //
-  //       //
-  //       setMemberArray([...memberArray, memberJoin]);
-  //     }
-  //   }, [socketMessage]);
+  useEffect(() => {
+    setLastMessage(socketMessage);
+    console.log(socketMessage);
+    if (socketMessage?.data) {
+      const memberJoin = JSON.parse(socketMessage?.data).data;
+      console.log(memberJoin);
+      //
+      //
+      setMemberArray([...memberArray, memberJoin]);
+    }
+  }, [socketMessage]);
   const checkState = () => {
     console.log({ t1banList, t2banList, t1PickList, t2PickList, phase, teamSwitch, confirmChampList });
   };

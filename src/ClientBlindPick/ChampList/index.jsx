@@ -1,4 +1,7 @@
 import React, { useState, useRef } from 'react';
+import useSound from 'use-sound';
+import clickSound from '/click.mp3';
+
 import './index.css';
 const defaultMember = {
   actionId: 1,
@@ -55,9 +58,18 @@ for (let i = 0; i < 100; i++) {
 export default function ChampList(props) {
   const memberList = props.memberArray || [defaultMember];
   const audioRef = useRef(null);
+  const [playSound] = useSound(clickSound);
+  const [playSoundChamp] = useSound(
+    'https://static.wikia.nocookie.net/leagueoflegends/images/0/0b/Yasuo_Select.ogg/revision/latest?cb=20200709161222.mp3',
+  );
+
+  const handlePlaySound = src => {
+    playSoundChamp();
+  };
+
   return (
     <div>
-      <audio ref={audioRef} src="your-audio-file.mp3" />
+      <audio ref={audioRef} src="./click.mp3" />
       <div className="wrapper">
         <div class="grid-container">
           {memberList.map(item => {
@@ -94,6 +106,8 @@ export default function ChampList(props) {
           <button
             style={{ width: 300 }}
             onClick={() => {
+              playSound();
+              handlePlaySound('https://static.wikia.nocookie.net/leagueoflegends/images/0/0b/Yasuo_Select.ogg/revision/latest?cb=20200709161222');
               const hasId2 = props.confirmChampList.some(obj => obj.uniqueId === props.pickChamp.uniqueId);
               if (hasId2) {
                 return;
