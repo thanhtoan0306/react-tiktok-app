@@ -68,7 +68,38 @@ export default function PickRow(props) {
         </div>
         <div className="player">4</div>
         <div className="player">5</div>
-        <div className="team">0</div>
+        <div className="team">
+          <div className="match">GRAND FINALS </div>
+          <div className="patch">GRAND FINALS </div>
+
+          <div className="team-logo-contaniner">
+            <div className="each-team">
+              <img
+                width={80}
+                height={'auto'}
+                src="https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1726801573959_539px-T1_2019_full_allmode.png"
+              />
+              <div style={{ textAlign: 'center' }}>SKT</div>
+              <div className="score">
+                <h2>2</h2>
+              </div>
+            </div>
+            <div style={{ marginTop: '30px' }}>VS</div>
+            <div className="each-team">
+              <img
+                width={80}
+                height={'auto'}
+                src={
+                  'https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1682322954525_Bilibili_Gaming_logo_20211.png'
+                }
+              />
+              <div style={{ textAlign: 'center' }}>SKT</div>
+              <div className="score">
+                <h2>2</h2>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="player">1</div>
         <div className="player">2</div>
         <div className="player">3</div>

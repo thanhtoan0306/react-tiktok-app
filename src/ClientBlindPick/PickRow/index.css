@@ -31,6 +31,34 @@
 }
 
 .team {
-/* grid-column: 1 / span 2; */
-/* width: 100px ; */
+  display: flex;
+  flex-direction: column;
+}
+
+.team-logo-contaniner {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  justify-items: center;
+}
+
+.match {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
+.patch {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.each-team {
+  display: flex;
+  flex-direction: column;
+}
+
+.score {
+  flex: 1;
+  text-align: center;
 }
