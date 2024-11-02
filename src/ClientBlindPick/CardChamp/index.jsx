@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import useWebSocket from 'react-use-websocket';
-import ChampList from './ChampList';
-import PickRow from './PickRow';
 import './index.css';
-import CardChamp from './CardChamp';
 const defaultMember = {
   actionId: 1,
   userId: '6816877011711280130',
@@ -49,48 +45,33 @@ const defaultMember = {
   label: '{0:user} joined',
   displayType: 'live_room_enter_toast',
 };
-export default function ClientBlindPick() {
-  const [lastMessage, setLastMessage] = useState(null);
-  const [memberArray, setMemberArray] = useState([defaultMember]);
-  //   const { sendMessage, lastMessage: socketMessage } = useWebSocket('ws://localhost:8080');
+const DEFAUT_IMAGE =
+  'https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/1dec87dd6e583aa7031db63150d8b86611e2f177-1280x720.jpg?auto=format&fit=fill&q=80&w=956';
+const array = [];
+for (let i = 0; i < 100; i++) {
+  array.push(defaultMember); // Or any other value you want
+}
 
-  //   useEffect(() => {
-  //     setLastMessage(socketMessage);
-  //     console.log(socketMessage);
-  //     if (socketMessage?.data) {
-  //       const memberJoin = JSON.parse(socketMessage?.data).data;
-  //       console.log(memberJoin);
-  //       //
-  //       //
-  //       setMemberArray([...memberArray, memberJoin]);
-  //     }
-  //   }, [socketMessage]);
-
+export default function CardChamp(props) {
+  const memberList = props.memberList || array;
   return (
-    <div>
-      <div className="pick-zone">
-        <div>
-          <iframe
-            width="400"
-            height="230"
-            src="https://www.youtube.com/embed/RqFZRIiduY4?si=ydlLdnGoJfgvFSFv"
-            // title="YouTube video player"
-            frameborder="0"
-            // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            // allowfullscreen
-          ></iframe>
-          <div>
-            <img src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/09/lich-thi-dau-cktg-2024.jpg" width={400} height={'auto'} />
-          </div>
-        </div>
-        <ChampList />
-        <div>
-          <CardChamp />
-        </div>
-      </div>
+    <div className="wrapper-card">
+      <img width={250} height={350} src={defaultMember.profilePictureUrl} />
+      <div className="rune-avatar">
+        <img style={{ borderRadius: '50%' }} width={40} height={40} src="https://pbs.twimg.com/media/GKbyumVWgAAdAhs.jpg" />
+        <img style={{ borderRadius: '50%' }} width={40} height={40} src="https://ddragon.leagueoflegends.com/cdn/14.21.1/img/profileicon/546.png" />
+        <img style={{ borderRadius: '50%' }} width={60} height={60} src="https://i.redd.it/nls87rjmn7o31.jpg" />
 
-      <PickRow />
+        <img width={40} height={40} src="https://i.pinimg.com/474x/58/12/00/5812006cb941167209f1301920dc18e4.jpg" />
+        <img
+          width={40}
+          height={40}
+          src="https://yt3.googleusercontent.com/AjySiY7h1dO3tFVIFMKZyv2eSWaCELxAQrkrdqjNN09hGaVahbf-JE5iVO-iMLkCjhWZ_RzDww=s900-c-k-c0x00ffffff-no-rj"
+        />
+      </div>
+      <div>
+        <div>{defaultMember.nickname}</div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.wrapper-card {
+  width: 250px;
+  height: 470px;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.rune-avatar {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
