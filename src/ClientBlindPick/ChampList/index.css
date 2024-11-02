@@ -12,7 +12,8 @@
   grid-template-columns: repeat(6, 1fr);
   /* 6 equal-width columns */
   column-gap: 20px;
-    /* Adjust the gap as needed */  /* Spacing between grid items */
+  /* Adjust the gap as needed */
+  /* Spacing between grid items */
 }
 
 .grid-item {
@@ -30,14 +31,14 @@
   font-size: 12px;
   margin: 5px 0;
   overflow: hidden;
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .button-container {
   width: 100%;
-    display: flex;
-      justify-content: center;
-      align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {

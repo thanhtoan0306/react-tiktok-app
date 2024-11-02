@@ -1,0 +1,36 @@
+.wrapper-pick {
+  width: 98%;
+  height: 540px;
+  margin: 0 auto;
+  /* border: solid 1px black; */
+  padding: 0 10px;
+  overflow-x: hidden;
+}
+
+.grid-container-pick {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr
+}
+
+.player {
+  border: solid 1px black;
+  height: 520px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-avatar {
+  /* width: 100%; */
+  transform: translateY(-150px);
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.team {
+/* grid-column: 1 / span 2; */
+/* width: 100px ; */
+}

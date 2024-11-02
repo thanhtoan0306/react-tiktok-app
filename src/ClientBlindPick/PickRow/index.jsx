@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import useWebSocket from 'react-use-websocket';
-import ChampList from './ChampList';
-import PickRow from './PickRow';
 import './index.css';
 const defaultMember = {
   actionId: 1,
@@ -48,40 +45,36 @@ const defaultMember = {
   label: '{0:user} joined',
   displayType: 'live_room_enter_toast',
 };
-export default function ClientBlindPick() {
-  const [lastMessage, setLastMessage] = useState(null);
-  const [memberArray, setMemberArray] = useState([defaultMember]);
-  //   const { sendMessage, lastMessage: socketMessage } = useWebSocket('ws://localhost:8080');
+const DEFAUT_IMAGE =
+  'https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/1dec87dd6e583aa7031db63150d8b86611e2f177-1280x720.jpg?auto=format&fit=fill&q=80&w=956';
+const array = [];
+for (let i = 0; i < 100; i++) {
+  array.push(defaultMember); // Or any other value you want
+}
 
-  //   useEffect(() => {
-  //     setLastMessage(socketMessage);
-  //     console.log(socketMessage);
-  //     if (socketMessage?.data) {
-  //       const memberJoin = JSON.parse(socketMessage?.data).data;
-  //       console.log(memberJoin);
-  //       //
-  //       //
-  //       setMemberArray([...memberArray, memberJoin]);
-  //     }
-  //   }, [socketMessage]);
-
+export default function PickRow(props) {
+  const memberList = props.memberList || array;
   return (
-    <div>
-      <div className="pick-zone">
-        <ChampList />
+    <div className="wrapper-pick">
+      <div className="grid-container-pick">
+        <div className="player">
+          <img className="player-avatar" src="https://i.pinimg.com/474x/cd/e9/37/cde9376a994f7e736a85a42e47ec7f9d.jpg" />
+        </div>
+        <div className="player">
+          <img className="player-avatar" src={defaultMember.profilePictureUrl} />
+        </div>
+        <div className="player">
+          <img className="player-avatar" src={DEFAUT_IMAGE} />
+        </div>
+        <div className="player">4</div>
+        <div className="player">5</div>
+        <div className="team">0</div>
+        <div className="player">1</div>
+        <div className="player">2</div>
+        <div className="player">3</div>
+        <div className="player">4</div>
+        <div className="player">5</div>
       </div>
-
-      <PickRow />
-      {/* <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/QphkgnxZ-oE?si=kneKBehwPffZTdVm"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe> */}
     </div>
   );
 }
