@@ -53,16 +53,41 @@ for (let i = 0; i < 100; i++) {
 }
 
 export default function ChampList(props) {
-  const memberList = props.memberList || array;
+  const memberList = props.memberArray || [defaultMember];
+  const [pickChamp, setPickChamp] = useState(defaultMember);
   return (
     <div>
       <div className="wrapper">
         <div class="grid-container">
           {memberList.map(item => {
+            const hasId2 = props.confirmChampList.some(obj => obj.uniqueId === item.uniqueId);
+
+            if (hasId2) {
+              console.log('Array includes ID 2');
+            } else {
+              console.log('Array does not include ID 2');
+            }
             return (
               <div class="grid-item">
                 <div>
-                  <img width={80} height={80} style={{ objectFit: 'cover' }} src={item.profilePictureUrl || DEFAUT_IMAGE} />
+                  <img
+                    onClick={() => {
+                      if (hasId2) {
+                        return;
+                      }
+
+                      item.uniqueId;
+                      props.onPickChamp(item);
+                      console.log(item.uniqueId, props.pickChamp.uniqueId);
+                    }}
+                    className={`champ-avatar ${hasId2 ? 'gray-tinted-element' : ''} ${
+                      item.uniqueId === props.pickChamp.uniqueId ? 'champ-select' : ''
+                    }`}
+                    width={80}
+                    height={80}
+                    style={{ objectFit: 'cover' }}
+                    src={item.profilePictureUrl || DEFAUT_IMAGE}
+                  />
                   <div className="champ-name">{item.nickname}</div>
                 </div>
               </div>
@@ -71,7 +96,15 @@ export default function ChampList(props) {
            
         </div>
         <div className="button-container">
-          <button className="button">Pick</button>
+          <button
+            style={{ width: 300 }}
+            onClick={() => {
+              props.onConfirmChamp(props.pickChamp);
+            }}
+            className="button"
+          >
+            LOCK IN
+          </button>
         </div>
       </div>
     </div>

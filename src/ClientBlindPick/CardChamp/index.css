@@ -1,7 +1,7 @@
 .wrapper-card {
   width: 250px;
   height: 470px;
-  border: solid 1px black;
+  border: solid 1px goldenrod;
   display: flex;
   flex-direction: column;
   justify-content: center;

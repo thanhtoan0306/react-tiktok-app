@@ -1,15 +1,22 @@
 .wrapper {
   width: 700px;
   position: relative;
-  /* height: 540px; */
+  height: 470px;
+  padding: 10px;
+  border-top: solid 1px goldenrod;
+  /* border-bottom: solid 1px goldenrod; */
+  /* overflow: hidden; */
+  /* border-radius: 50%; */
 }
 
 .grid-container {
   margin: 0 auto;
   width: 610px;
   max-height: 500px;
-  overflow-x: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: grid;
+  padding: 0 10px;
   grid-template-columns: repeat(6, 1fr);
   /* 6 equal-width columns */
   column-gap: 20px;
@@ -22,6 +29,12 @@
   max-width: 80px;
   min-height: 80px;
   min-width: 80px;
+}
+.champ-avatar {
+  border: solid 2px gainsboro;
+}
+.champ-avatar:hover, .champ-select {
+  border: solid 2px goldenrod;
 }
 
 .champ-name {
@@ -37,10 +50,10 @@
 
 .button-container {
   position: absolute;
-  bottom: -60px;
-    left: 50%;
-    right: 50%;
-    transform: translateY(-50%);
+  bottom: -100px;
+  left: 30%;
+  /* right: 50%; */
+  transform: translateY(-50%);
   /* width: 200px; */
   display: flex;
   justify-content: center;
@@ -49,6 +62,10 @@
 
 .button {
   border: solid 1px orange;
-  /* width: 200px; */
+  width: 200px;
   color: orange;
+}
+
+.gray-tinted-element {
+  filter: grayscale(100%);
 }
