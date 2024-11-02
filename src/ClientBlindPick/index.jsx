@@ -196,7 +196,7 @@ export default function ClientBlindPick() {
         </div>
       </div>
 
-      <PickRow />
+      <PickRow t1banList={t1banList} t2banList={t2banList} />
     </div>
   );
 }

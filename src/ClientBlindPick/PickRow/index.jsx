@@ -54,30 +54,29 @@ for (let i = 0; i < 100; i++) {
 }
 
 export default function PickRow(props) {
-  const memberList = props.memberList || array;
   return (
     <div className="wrapper-pick">
       <div className="ban-container">
         <div className="ban-team">
           <div className="ban-cell">
-            <img width={80} height={80} src={GRAY_IMAGE} />
+            <img width={80} height={80} src={props.t1banList[0]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
           <div className="ban-cell">
-            <img width={80} height={80} src={GRAY_IMAGE} />
+            <img width={80} height={80} src={props.t1banList[1]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
           <div className="ban-cell">
-            <img width={80} height={80} src={GRAY_IMAGE} />
+            <img width={80} height={80} src={props.t1banList[2]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
         </div>
         <div className="ban-team">
           <div className="ban-cell">
-            <img width={80} height={80} src={GRAY_IMAGE} />
+            <img width={80} height={80} src={props.t2banList[0]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
           <div className="ban-cell">
-            <img width={80} height={80} src={GRAY_IMAGE} />
+            <img width={80} height={80} src={props.t2banList[1]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
           <div className="ban-cell">
-            <img width={80} height={80} src={GRAY_IMAGE} />
+            <img width={80} height={80} src={props.t2banList[2]?.profilePictureUrl || GRAY_IMAGE} />
           </div>
         </div>
       </div>
