@@ -45,6 +45,7 @@ const defaultMember = {
   label: '{0:user} joined',
   displayType: 'live_room_enter_toast',
 };
+const GRAY_IMAGE = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4oaycRSKJnSJQf_KwOPQ1AN_97Swn80nfaw&s';
 const DEFAUT_IMAGE =
   'https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/1dec87dd6e583aa7031db63150d8b86611e2f177-1280x720.jpg?auto=format&fit=fill&q=80&w=956';
 const array = [];
@@ -59,36 +60,56 @@ export default function PickRow(props) {
       <div className="ban-container">
         <div className="ban-team">
           <div className="ban-cell">
-            <img width={80} height={80} src={DEFAUT_IMAGE} />
+            <img width={80} height={80} src={GRAY_IMAGE} />
           </div>
           <div className="ban-cell">
-            <img width={80} height={80} src={DEFAUT_IMAGE} />
+            <img width={80} height={80} src={GRAY_IMAGE} />
           </div>
           <div className="ban-cell">
-            <img width={80} height={80} src={DEFAUT_IMAGE} />
+            <img width={80} height={80} src={GRAY_IMAGE} />
           </div>
         </div>
         <div className="ban-team">
-          <div className="ban-cell">ban-container</div>
-          <div className="ban-cell">ban-container</div>
-          <div className="ban-cell">ban-container</div>
+          <div className="ban-cell">
+            <img width={80} height={80} src={GRAY_IMAGE} />
+          </div>
+          <div className="ban-cell">
+            <img width={80} height={80} src={GRAY_IMAGE} />
+          </div>
+          <div className="ban-cell">
+            <img width={80} height={80} src={GRAY_IMAGE} />
+          </div>
         </div>
       </div>
       <div className="grid-container-pick">
         <div className="player">
-          <img className="player-avatar" src="https://i.pinimg.com/474x/cd/e9/37/cde9376a994f7e736a85a42e47ec7f9d.jpg" />
+          <img className="player-avatar" src="https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/TOP.png" />
         </div>
         <div className="player">
-          <img className="player-avatar" src={defaultMember.profilePictureUrl} />
+          <img className="player-avatar" src={'https://raw.githubusercontent.com/davidherasp/lol_images/master/role_lane_icons/MIDDLE.png'} />
         </div>
         <div className="player">
-          <img className="player-avatar" src={DEFAUT_IMAGE} />
+          <img
+            className="player-avatar"
+            src={
+              'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2ec970f4-1706-4915-9a93-41f3d9c8202c/degndao-3803ac5c-8d3b-4205-bdac-17e03fb712dd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJlYzk3MGY0LTE3MDYtNDkxNS05YTkzLTQxZjNkOWM4MjAyY1wvZGVnbmRhby0zODAzYWM1Yy04ZDNiLTQyMDUtYmRhYy0xN2UwM2ZiNzEyZGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dl2fyLAB4_80akvDhBoZ-4w7eforvxOeLLeqT1Jx2G4'
+            }
+          />
         </div>
-        <div className="player">4</div>
-        <div className="player">5</div>
+        <div className="player">
+          {' '}
+          <img className="player-avatar" src={'https://github.com/esports-bits/lol_images/blob/master/role_lane_icons/SUPPORT.png?raw=true'} />
+        </div>
+        <div className="player">
+          {' '}
+          <img
+            className="player-avatar"
+            src={'https://raw.githubusercontent.com/esports-bits/lol_images/refs/heads/master/role_lane_icons/ADC.png'}
+          />
+        </div>
         <div className="team">
           <div className="match">GRAND FINALS </div>
-          <div className="patch">GRAND FINALS </div>
+          <div className="patch">PATCH 14.6 </div>
 
           <div className="team-logo-contaniner">
             <div className="each-team">
@@ -111,7 +132,7 @@ export default function PickRow(props) {
                   'https://am-a.akamaihd.net/image?resize=96:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1682322954525_Bilibili_Gaming_logo_20211.png'
                 }
               />
-              <div style={{ textAlign: 'center' }}>SKT</div>
+              <div style={{ textAlign: 'center' }}>BLG</div>
               <div className="score">
                 <h2>2</h2>
               </div>
