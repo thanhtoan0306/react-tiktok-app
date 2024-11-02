@@ -101,7 +101,7 @@ for (let i = 0; i < 100; i++) {
 
   array.push(deepCopy); // Or any other value you want
 }
-const PHASE = { BAN: 1, PICK: 2 };
+export const PHASE = { BAN: 1, PICK: 2 };
 const TEAM = { T1: 1, T2: 2 };
 export default function ClientBlindPick() {
   const [lastMessage, setLastMessage] = useState(null);
@@ -168,7 +168,7 @@ export default function ClientBlindPick() {
   return (
     <div>
       <div className="pick-zone">
-        <div>
+        <div style={{ paddingLeft: 30 }}>
           <iframe
             width="400"
             height="230"
@@ -190,9 +190,9 @@ export default function ClientBlindPick() {
           onConfirmChamp={handleComfirmChamp}
           confirmChampList={confirmChampList}
         />
-        <div>
-          <CardChamp />
-          <button onClick={checkState}>Check</button>
+        <div style={{ paddingLeft: 100 }}>
+          <CardChamp pickChamp={pickChamp} />
+          {/* <button onClick={checkState}>Check</button> */}
         </div>
       </div>
 

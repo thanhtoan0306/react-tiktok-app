@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
+import { PHASE } from '..';
 const defaultMember = {
   actionId: 1,
   userId: '6816877011711280130',
@@ -53,24 +54,29 @@ for (let i = 0; i < 100; i++) {
 }
 
 export default function CardChamp(props) {
-  const memberList = props.memberList || array;
   return (
-    <div className="wrapper-card">
-      <img width={250} height={350} src={defaultMember.profilePictureUrl} />
-      <div className="rune-avatar">
-        <img style={{ borderRadius: '50%' }} width={40} height={40} src="https://pbs.twimg.com/media/GKbyumVWgAAdAhs.jpg" />
-        <img style={{ borderRadius: '50%' }} width={40} height={40} src="https://ddragon.leagueoflegends.com/cdn/14.21.1/img/profileicon/546.png" />
-        <img style={{ borderRadius: '50%' }} width={60} height={60} src="https://i.redd.it/nls87rjmn7o31.jpg" />
+    <div className="card2">
+      <div className="wrapper-card">
+        <img width={250} height={350} src={props.pickChamp.profilePictureUrl || ''} />
+        <div className="rune-avatar">
+          <img style={{ borderRadius: '50%' }} width={40} height={40} src="https://pbs.twimg.com/media/GKbyumVWgAAdAhs.jpg" />
+          <img style={{ borderRadius: '50%' }} width={40} height={40} src="https://ddragon.leagueoflegends.com/cdn/14.21.1/img/profileicon/546.png" />
+          <img style={{ borderRadius: '50%' }} width={60} height={60} src="https://i.redd.it/nls87rjmn7o31.jpg" />
 
-        <img width={40} height={40} src="https://i.pinimg.com/474x/58/12/00/5812006cb941167209f1301920dc18e4.jpg" />
-        <img
-          width={40}
-          height={40}
-          src="https://yt3.googleusercontent.com/AjySiY7h1dO3tFVIFMKZyv2eSWaCELxAQrkrdqjNN09hGaVahbf-JE5iVO-iMLkCjhWZ_RzDww=s900-c-k-c0x00ffffff-no-rj"
-        />
+          <img width={40} height={40} src="https://i.pinimg.com/474x/58/12/00/5812006cb941167209f1301920dc18e4.jpg" />
+          <img
+            width={40}
+            height={40}
+            src="https://yt3.googleusercontent.com/AjySiY7h1dO3tFVIFMKZyv2eSWaCELxAQrkrdqjNN09hGaVahbf-JE5iVO-iMLkCjhWZ_RzDww=s900-c-k-c0x00ffffff-no-rj"
+          />
+        </div>
+        <div>
+          <div>{props.pickChamp.nickname}</div>
+        </div>
       </div>
-      <div>
-        <div>{defaultMember.nickname}</div>
+      <div className="card__content">
+        <p className="card__title">Bio</p>
+        <p className="card__description">{props.pickChamp.userDetails.bioDescription}</p>
       </div>
     </div>
   );
